@@ -2,7 +2,7 @@
  # @Author: wangjun
  # @LastEditors: wangjun
  # @Date: 2020-07-06 13:16:03
- # @LastEditTime: 2020-07-06 13:53:54
+ # @LastEditTime: 2020-07-06 13:59:00
  # @Description: 
 ### 
 # 确保脚本抛出遇到的错误
@@ -22,9 +22,9 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
-git push -f git@github.com:<xiaojun1221>/<xiaojun1221>.github.io.git master
+# git push -f git@github.com:xiaojun1221/xiaojun1221.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+git push -f git@github.com:xiaojun1221/blog.git master:gh-pages
 
 cd -
