@@ -1,18 +1,19 @@
 ---
 home: true
-heroText: vuepress-theme-reco
+heroText: 千里之行，始于足下
 tagline: A simple and beautiful vuepress blog theme.
-# heroImage: /hero.png
+# heroImage: /hero.jpg
 # heroImageStyle: {
 #   maxWidth: '600px',
 #   width: '100%',
 #   display: block,
 #   margin: '9rem auto 2rem',
-#   background: '#fff',
 #   borderRadius: '1rem',
+#   boxShadow: '0 5px 18px rgba(0,0,0,0.2)'
 # }
+bgImage: '/hero.jpg'
 bgImageStyle: {
-  height: '450px'
+  height: '650px'
 }
 isShowTitleInHome: false
 actionText: Guide
