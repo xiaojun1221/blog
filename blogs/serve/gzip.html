@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用gzip压缩数据传输 | jun的个人空间</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="A simple and beautiful vuepress blog theme .">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/blog/assets/css/0.styles.22e22db1.css" as="style"><link rel="preload" href="/blog/assets/js/app.2e9aaf02.js" as="script"><link rel="preload" href="/blog/assets/js/3.df7e12f5.js" as="script"><link rel="preload" href="/blog/assets/js/1.71a2a4d1.js" as="script"><link rel="preload" href="/blog/assets/js/26.c4c011ae.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.06cfad2a.js"><link rel="prefetch" href="/blog/assets/js/11.df88bce0.js"><link rel="prefetch" href="/blog/assets/js/12.041115a7.js"><link rel="prefetch" href="/blog/assets/js/13.f0185e2a.js"><link rel="prefetch" href="/blog/assets/js/14.5a045b81.js"><link rel="prefetch" href="/blog/assets/js/15.7164e1d7.js"><link rel="prefetch" href="/blog/assets/js/16.f9c02261.js"><link rel="prefetch" href="/blog/assets/js/17.d889275f.js"><link rel="prefetch" href="/blog/assets/js/18.11d93686.js"><link rel="prefetch" href="/blog/assets/js/19.c7295ef8.js"><link rel="prefetch" href="/blog/assets/js/20.ef0bf1ef.js"><link rel="prefetch" href="/blog/assets/js/21.c0808f41.js"><link rel="prefetch" href="/blog/assets/js/22.411bd3f9.js"><link rel="prefetch" href="/blog/assets/js/23.18a8e710.js"><link rel="prefetch" href="/blog/assets/js/24.ca6e4b20.js"><link rel="prefetch" href="/blog/assets/js/25.0d72f462.js"><link rel="prefetch" href="/blog/assets/js/27.eb3de618.js"><link rel="prefetch" href="/blog/assets/js/28.f8e2a1e2.js"><link rel="prefetch" href="/blog/assets/js/29.f03180e4.js"><link rel="prefetch" href="/blog/assets/js/30.36ab1f30.js"><link rel="prefetch" href="/blog/assets/js/31.eeacc110.js"><link rel="prefetch" href="/blog/assets/js/32.20a67723.js"><link rel="prefetch" href="/blog/assets/js/33.eedb8eae.js"><link rel="prefetch" href="/blog/assets/js/34.5746a48f.js"><link rel="prefetch" href="/blog/assets/js/35.5aae019c.js"><link rel="prefetch" href="/blog/assets/js/36.8cf983a3.js"><link rel="prefetch" href="/blog/assets/js/37.52c37ca6.js"><link rel="prefetch" href="/blog/assets/js/38.a2ae90d0.js"><link rel="prefetch" href="/blog/assets/js/39.491dc017.js"><link rel="prefetch" href="/blog/assets/js/4.868230a6.js"><link rel="prefetch" href="/blog/assets/js/40.aa1410cd.js"><link rel="prefetch" href="/blog/assets/js/5.ea5f743c.js"><link rel="prefetch" href="/blog/assets/js/6.c6d16241.js"><link rel="prefetch" href="/blog/assets/js/7.e9233ad5.js"><link rel="prefetch" href="/blog/assets/js/8.7ae95209.js"><link rel="prefetch" href="/blog/assets/js/9.3304f7f8.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.22e22db1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-945f89ac><div data-v-945f89ac><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-945f89ac data-v-945f89ac><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-3dc17307 data-v-945f89ac data-v-945f89ac><h3 class="title" style="display:none;" data-v-3dc17307 data-v-3dc17307>jun的个人空间</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-3dc17307 data-v-3dc17307><input type="password" value="" data-v-3dc17307> <span data-v-3dc17307>Konck! Knock!</span> <button data-v-3dc17307>OK</button></label> <div class="footer" style="display:none;" data-v-3dc17307 data-v-3dc17307><span data-v-3dc17307><i class="iconfont reco-theme" data-v-3dc17307></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-3dc17307>vuePress-theme-reco</a></span> <span data-v-3dc17307><i class="iconfont reco-copyright" data-v-3dc17307></i> <a data-v-3dc17307><span data-v-3dc17307>jun</span>
+            
+          <span data-v-3dc17307>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-945f89ac><header class="navbar" data-v-945f89ac><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.png" alt="jun的个人空间" class="logo"> <span class="site-name">jun的个人空间</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/系统教程/" class="nav-link"><i class="iconfont undefined"></i>
+  系统教程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/环境构建/" class="nav-link"><i class="iconfont undefined"></i>
+  环境构建
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/K8S/" class="nav-link"><i class="iconfont undefined"></i>
+  K8S
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/性能优化/" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/theme-reco/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress-reco
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-945f89ac></div> <aside class="sidebar" data-v-945f89ac><div class="personal-info-wrapper" data-v-661bee24><img src="/blog/avatar.jpg" alt="author-avatar" class="personal-img" data-v-661bee24> <h3 class="name" data-v-661bee24>
+    jun
+  </h3> <div class="num" data-v-661bee24><div data-v-661bee24><h3 data-v-661bee24>26</h3> <h6 data-v-661bee24>文章</h6></div> <div data-v-661bee24><h3 data-v-661bee24>31</h3> <h6 data-v-661bee24>标签</h6></div></div> <hr data-v-661bee24></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/系统教程/" class="nav-link"><i class="iconfont undefined"></i>
+  系统教程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/环境构建/" class="nav-link"><i class="iconfont undefined"></i>
+  环境构建
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/K8S/" class="nav-link"><i class="iconfont undefined"></i>
+  K8S
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/性能优化/" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/theme-reco/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress-reco
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>使用gzip压缩数据传输</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/blogs/serve/gzip.html#启用springboot压缩，其在返回响应时，将数据压缩" class="sidebar-link">启用springboot压缩，其在返回响应时，将数据压缩</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/blogs/serve/gzip.html#启用feign压缩及解压响应" class="sidebar-link">启用feign压缩及解压响应</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-3dc17307 data-v-945f89ac><h3 class="title" style="display:none;" data-v-3dc17307 data-v-3dc17307>使用gzip压缩数据传输</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-3dc17307 data-v-3dc17307><input type="password" value="" data-v-3dc17307> <span data-v-3dc17307>Konck! Knock!</span> <button data-v-3dc17307>OK</button></label> <div class="footer" style="display:none;" data-v-3dc17307 data-v-3dc17307><span data-v-3dc17307><i class="iconfont reco-theme" data-v-3dc17307></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-3dc17307>vuePress-theme-reco</a></span> <span data-v-3dc17307><i class="iconfont reco-copyright" data-v-3dc17307></i> <a data-v-3dc17307><span data-v-3dc17307>jun</span>
+            
+          <span data-v-3dc17307>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-945f89ac><main class="page"><div class="page-title" style="display:none;"><h1>使用gzip压缩数据传输</h1> <hr> <div data-v-32e7eb69><i class="iconfont reco-account" data-v-32e7eb69><span data-v-32e7eb69>jun</span></i> <i class="iconfont reco-date" data-v-32e7eb69><span data-v-32e7eb69>2020-04-16 15:31:25</span></i> <i class="iconfont reco-eye" data-v-32e7eb69><span id="/blog/blogs/serve/gzip.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-32e7eb69><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-32e7eb69><span class="tag-item" data-v-32e7eb69>gzip</span><span class="tag-item" data-v-32e7eb69>feign</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="使用gzip压缩数据传输，及替换feign的通信实现为httpclient"><a href="#使用gzip压缩数据传输，及替换feign的通信实现为httpclient" class="header-anchor">#</a> 使用gzip压缩数据传输，及替换feign的通信实现为httpclient</h1> <h2 id="启用springboot压缩，其在返回响应时，将数据压缩"><a href="#启用springboot压缩，其在返回响应时，将数据压缩" class="header-anchor">#</a> 启用springboot压缩，其在返回响应时，将数据压缩</h2> <ul><li>修改application-xxx.yml文件，在server代码段中，增加以下配置以开启SpringBoot的压缩</li></ul> <div class="language-yml line-numbers-mode"><pre class="language-yml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token comment">#启用响应压缩</span>
+  <span class="token key atrule">compression</span><span class="token punctuation">:</span>
+    <span class="token comment">#启用压缩</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">mime-types</span><span class="token punctuation">:</span> application/json<span class="token punctuation">,</span>application/xml<span class="token punctuation">,</span>text/html<span class="token punctuation">,</span>text/xml<span class="token punctuation">,</span>text/plain
+	<span class="token comment">#最小响应数据的大小，当响应数据大于此值时才会压缩(单位B)</span>
+    <span class="token key atrule">min-response-size</span><span class="token punctuation">:</span> <span class="token number">2048</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>使用postman直接请求本地(不走网关和nginx)，如果出现下图，则表示后端gzip压缩配置成功</li></ul> <p><img src="/media//202012/gzip%E5%8E%8B%E7%BC%A9_1608279299.png" alt=""></p> <h2 id="启用feign压缩及解压响应"><a href="#启用feign压缩及解压响应" class="header-anchor">#</a> 启用feign压缩及解压响应</h2> <ul><li>修改application-xxx.yml文件，在feign代码段，增加以下配置启用httpclient及并且使feign也使用gzip压缩</li></ul> <div class="language-yml line-numbers-mode"><pre class="language-yml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
+    <span class="token comment">#启用熔断器</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token comment">#启用feign压缩</span>
+  <span class="token key atrule">compression</span><span class="token punctuation">:</span>
+    <span class="token key atrule">request</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token comment">#压缩的Mime类型</span>
+      <span class="token key atrule">mime-types</span><span class="token punctuation">:</span> application/json<span class="token punctuation">,</span>application/xml<span class="token punctuation">,</span>text/html<span class="token punctuation">,</span>text/xml<span class="token punctuation">,</span>text/plain
+      <span class="token comment">#最小请求数据的大小，当请求数据大于此值时才会压缩(单位B)</span>
+      <span class="token key atrule">min-request-size</span><span class="token punctuation">:</span> <span class="token number">2048</span>
+    <span class="token comment">#解压响应</span>
+    <span class="token key atrule">response</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token comment">#使用gzip解压</span>
+      <span class="token key atrule">useGzipDecoder</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">httpclient</span><span class="token punctuation">:</span>
+    <span class="token comment">#使用httpclient作为实现</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><ul><li>修改pom.xml文件，增加feign-httpclient依赖</li></ul> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token entity named-entity" title="&lt;">&amp;lt;</span>!-- 集成feign httpclient依赖 --<span class="token entity named-entity" title="&gt;">&amp;gt;</span>
+<span class="token entity named-entity" title="&lt;">&amp;lt;</span>dependency<span class="token entity named-entity" title="&gt;">&amp;gt;</span>
+    <span class="token entity named-entity" title="&lt;">&amp;lt;</span>groupId<span class="token entity named-entity" title="&gt;">&amp;gt;</span>io.github.openfeign<span class="token entity named-entity" title="&lt;">&amp;lt;</span>/groupId<span class="token entity named-entity" title="&gt;">&amp;gt;</span>
+    <span class="token entity named-entity" title="&lt;">&amp;lt;</span>artifactId<span class="token entity named-entity" title="&gt;">&amp;gt;</span>feign-httpclient<span class="token entity named-entity" title="&lt;">&amp;lt;</span>/artifactId<span class="token entity named-entity" title="&gt;">&amp;gt;</span>
+<span class="token entity named-entity" title="&lt;">&amp;lt;</span>/dependency<span class="token entity named-entity" title="&gt;">&amp;gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>在服务提供者打断点，观察request对象，如果有以下header，表示feign请求时进行了压缩</li></ul> <p><img src="/media//202104/2021-04-16_182636.png" alt=""></p> <ul><li>配置nginx,修改nginx.conf文件，以开启gzip压缩，该配置位于http代码段中</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>http<span class="token punctuation">{</span>
+    <span class="token function">gzip</span> on<span class="token punctuation">;</span>
+    gzip_static on<span class="token punctuation">;</span>
+    gzip_min_length  <span class="token number">1024</span><span class="token punctuation">;</span>
+    gzip_buffers     <span class="token number">4</span> 16k<span class="token punctuation">;</span>
+    gzip_http_version <span class="token number">1.1</span><span class="token punctuation">;</span>
+    gzip_comp_level <span class="token number">2</span><span class="token punctuation">;</span>
+    gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml<span class="token punctuation">;</span>
+    gzip_vary on<span class="token punctuation">;</span>
+    gzip_proxied   expired no-cache no-store private auth<span class="token punctuation">;</span>
+    gzip_disable   <span class="token operator">&amp;</span>quot<span class="token punctuation">;</span>MSIE <span class="token punctuation">[</span><span class="token number">1</span>-6<span class="token punctuation">]</span><span class="token punctuation">\</span>.<span class="token operator">&amp;</span>quot<span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>使用postman测试，如果出现下图，则表示后端gzip压缩配置成功</li></ul> <p><img src="/media//202012/gzip%E5%8E%8B%E7%BC%A9_1608279299.png" alt=""></p> <ul><li>前端进行配置，将静态资源进行压缩
+<ul><li>vue-cli 3.0在 <strong>vue.config.js</strong>中配置</li> <li>vue-cli 2.0在 <strong>index.js</strong>中配置</li></ul></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code>productionGzip<span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><div class="kanbanniang" data-v-ee8d62e6><div class="banniang-container" style="display:;" data-v-ee8d62e6><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-ee8d62e6>
+      欢迎来到 jun的个人空间
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-ee8d62e6><i class="kbnfont kbn-ban-home ban-home" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-message message" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-close close" data-v-ee8d62e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-ee8d62e6><i class="kbnfont kbn-ban-info info" data-v-ee8d62e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-ee8d62e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="position:fixed;left:0px;bottom:0px;opacity:0.9;z-index:99999;" data-v-ee8d62e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-ee8d62e6>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/blog/assets/js/app.2e9aaf02.js" defer></script><script src="/blog/assets/js/3.df7e12f5.js" defer></script><script src="/blog/assets/js/1.71a2a4d1.js" defer></script><script src="/blog/assets/js/26.c4c011ae.js" defer></script>
+  </body>
+</html>
